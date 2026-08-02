@@ -1,8 +1,27 @@
 aid: ursula
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ursula.png
 name: Ursula
-description: 'Ursula is a company surfaced as a portfolio company of prosus-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Ursula is a Brazil-based AI startup building AI-native characters. Founded
+  by an Emmy-winning team with experience at Pixar, Unity, Blizzard, and
+  Google, it combines LLMs, symbolic AI, and long-term memory to power
+  emotionally aware digital beings that evolve and connect with users across
+  games, apps, and digital worlds. Ursula is a seed-stage Prosus Ventures
+  portfolio company surfaced for the API Evangelist network. It publishes no
+  public developer API program, and at enrichment time its Framer-hosted
+  website at ursula.ai returned HTTP 404 (site unpublished) while the domain
+  retained valid TLS and SPF/DMARC records.
 url: https://raw.githubusercontent.com/api-evangelist/ursula/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +31,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai
+- Artificial Intelligence
+- AI Characters
+- Gaming
+- LLM
+- Brazil
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ursula-domain-security.yml
 - type: Website
   url: https://ursula.ai
+- type: LLMsTxt
+  url: llms/ursula-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

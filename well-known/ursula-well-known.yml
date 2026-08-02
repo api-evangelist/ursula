@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the Ursula website
+  host (the only host in apis.yml — the company publishes no public API base
+  URL). At probe time https://ursula.ai/ itself returned HTTP 404 serving a
+  Framer "Site Not Found" page, meaning the company's Framer-hosted website is
+  currently unpublished; the domain still resolves with valid TLS and SPF/DMARC
+  records (see security/ursula-domain-security.yml). Status is the HTTP code
+  observed at fetch time. No document returned 200, so no raw files were saved.
+  Candidate subdomains www., api., and app.ursula.ai resolve (wildcard DNS to
+  the same Framer host) but also return 404; docs., developer., status., and
+  trust.ursula.ai do not resolve.
+hosts:
+  - host: https://ursula.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404
